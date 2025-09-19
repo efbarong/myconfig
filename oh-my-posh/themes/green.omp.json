@@ -14,6 +14,7 @@
         },
         {
           "background": "#80d6b1",
+          "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "style": "agnoster_short"
@@ -24,6 +25,7 @@
         },
         {
           "background": "#4bbe9a",
+          "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "properties": {
@@ -35,6 +37,7 @@
         {
           "type": "git",
           "background": "#2a9d7c",
+          "foreground": "#000000",
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
           "properties": {
