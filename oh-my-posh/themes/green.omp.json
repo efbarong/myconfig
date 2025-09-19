@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#a3e1c9",
+          "foreground": "#000000",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "template": "{{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#80d6b1",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "agnoster_short"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#4bbe9a",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "properties": {
+            "fetch_version": true
+          },
+          "template": " Node {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        },
+        {
+          "type": "git",
+          "background": "#2a9d7c",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_upstream_icon": false,
+            "branch_icon": "",
+            "fetch_status": true,
+            "source": "cli"
+          },
+          "template": " ({{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}) "
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#45F1C2",
+          "style": "plain",
+          "template": "• ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 3
+}
