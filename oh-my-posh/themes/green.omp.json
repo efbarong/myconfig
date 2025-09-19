@@ -58,7 +58,9 @@
         {
           "foreground": "#45F1C2",
           "style": "plain",
-          "template": "• ",
+          "properties": {
+            "text": "•"
+          },
           "type": "text"
         }
       ],
